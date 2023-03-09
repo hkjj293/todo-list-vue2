@@ -2,7 +2,7 @@
 
 Functions and Components to be created:
 
- - [ ] Background --> body
+ - [x] Background --> body
  - [ ] List --> *joblist
  - [ ] Inside for each element --> *list-element (recursive)
  - [ ] Button to add element --> *add-element-slot
