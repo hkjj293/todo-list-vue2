@@ -1,16 +1,17 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import TheWelcome from "./components/TheWelcome.vue";
+//import HelloWorld from "./components/HelloWorld.vue";
+//import TheWelcome from "./components/TheWelcome.vue";
+import JobList from "./components/JobList.vue"; 
 </script>
 
 <template>
   <div id="app">
     <header>
-      <title>Todo-list Vue2</title>
+      TODO-List
     </header>
 
     <main>
-
+      <JobList />
     </main>
   </div>
 </template>
@@ -18,6 +19,8 @@ import TheWelcome from "./components/TheWelcome.vue";
 <style scoped>
 header {
   line-height: 1.5;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: xx-large;
 }
 
 .logo {
