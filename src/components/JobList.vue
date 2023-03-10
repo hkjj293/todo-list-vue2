@@ -4,6 +4,7 @@ export default {
     data() {
         return {
             jobs: [],
+            jobsCreated: 0,
         }
     },
     mounted() {
@@ -16,9 +17,11 @@ export default {
                 content: "",
                 done: false,
                 editMode: false,
-            })
+                key: this.jobsCreated++
+            });
         },
         onDeleteJob(id) {
+            console.log(id);
             this.jobs.splice(id, 1);
         }
     }
@@ -27,12 +30,8 @@ export default {
 
 <template>
     <div class="jobList">
-        <div v-for="(job, index) in jobs">
-            <Job :id=index :job=job @delete="onDeleteJob" />
-        </div>
-        <div>
-            <AddButton @add-job="onAddJob" />
-        </div>
+        <Job v-for="(job, index) in jobs" :id=index :job=job @delete="onDeleteJob" :key=job.key />
+        <AddButton @add-job="onAddJob" />
     </div>
 </template>
 

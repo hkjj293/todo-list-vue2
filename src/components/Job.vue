@@ -10,7 +10,7 @@ export default {
         }
     },
     mounted() {
-
+        this.onFocus();
     },
     emits: ['delete'],
     props: ['job', 'id'],
