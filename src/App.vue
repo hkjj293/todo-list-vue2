@@ -1,7 +1,6 @@
 <script setup>
 //import HelloWorld from "./components/HelloWorld.vue";
 //import TheWelcome from "./components/TheWelcome.vue";
-import JobList from "./components/JobList.vue"; 
 </script>
 
 <template>
@@ -11,7 +10,7 @@ import JobList from "./components/JobList.vue";
     </header>
 
     <main>
-      <JobList />
+      <JobList showAddButton="true" />
     </main>
   </div>
 </template>

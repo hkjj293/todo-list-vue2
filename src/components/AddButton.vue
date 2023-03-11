@@ -26,4 +26,10 @@ export default {
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+div,
+button {
+    min-width: 100px;
+    width: 100%;
+}
+</style>

@@ -10,14 +10,14 @@ export default {
     mounted() {
 
     },
-    props: ['userId'],
+    props: ['userId', 'showAddButton'],
     methods: {
         onAddJob() {
             this.jobs.push({
                 content: "",
                 done: false,
                 editMode: false,
-                key: this.jobsCreated++
+                key: Math.random() + Math.random() * 1000000
             });
         },
         onDeleteJob(id) {
@@ -31,7 +31,7 @@ export default {
 <template>
     <div class="jobList">
         <Job v-for="(job, index) in jobs" :id=index :job=job @delete="onDeleteJob" :key=job.key />
-        <AddButton @add-job="onAddJob" />
+        <AddButton v-if="showAddButton" @add-job="onAddJob" />
     </div>
 </template>
 
